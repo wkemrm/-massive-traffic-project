@@ -113,9 +113,6 @@ public class CommentApiV2Test {
 
         System.out.println("secondPage");
         for (CommentResponse response : responses2) {
-            if(!response.getCommentId().equals(response.getParentCommentId())) {
-                System.out.print("\t");
-            }
             System.out.println("comment.getCommentId() = " + response.getCommentId());
         }
     }
