@@ -24,7 +24,7 @@ public class ArticleViewService {
 
         Long count = articleViewCountRepository.increase(articleId);
 
-        if (count % BACK_UP_BATCH_SIZE ==0 ) {
+        if (count % BACK_UP_BATCH_SIZE == 0) {
             articleViewCountBackUpProcessor.backUp(articleId, count);
         }
         return count;
